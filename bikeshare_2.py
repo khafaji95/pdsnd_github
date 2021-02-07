@@ -27,16 +27,16 @@ def check_filter(question, category):
     """
 
     # A variable that acts as a switch for the While Loop.
-    x = True
-    while x:
+
+    while True:
         user_input = input(question).lower()
 
         if (user_input in city_input) and (category == "Enter City"):
-            x = False
+            break
         elif (user_input in month_input) and (category == "Enter Month"):
-            x = False
+            break
         elif (user_input in day_input) and (category == "Enter Day"):
-            x = False
+            break
         else:
             print("Ops! The input you entered is not correct please try again and choose from the list shown below.\n\n")
 
@@ -214,16 +214,16 @@ def user_stats(df, city):
     print('-' * 40)
 
 def raw_data(df):
-    x = True
+
     index = 0
-    while x:
+    while True:
         print("\nDisplaying five rows of your data: \n")
         pd.set_option("display.max.columns", None)
         print(df.iloc[index:index+5])
         index+=5
         answer = input("\nDo you wish to view more rows? Yes or No\n").lower()
         if answer == "no":
-            x = False
+            break
 
 def main():
     while True:
@@ -236,8 +236,7 @@ def main():
         view_raw_data = input("\nDo you wish to view the raw data? Yes or No\n").lower()
         if view_raw_data == "yes":
             raw_data(df)
-
-
+            
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break

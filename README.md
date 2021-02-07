@@ -2,7 +2,7 @@
 07/02/2021
 
 ### Project Title
-Bikeshare Project
+Explore-US-Bikeshare-Data Project
 
 ### Description
 In this project, you will use data provided by Motivate, a bike share system provider for many major cities in the United States, 

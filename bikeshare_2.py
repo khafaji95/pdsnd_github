@@ -27,16 +27,16 @@ def check_filter(question, category):
     """
 
     # A variable that acts as a switch for the While Loop.
-    x = True
-    while x:
+
+    while True:
         user_input = input(question).lower()
 
         if (user_input in city_input) and (category == "Enter City"):
-            x = False
+            break
         elif (user_input in month_input) and (category == "Enter Month"):
-            x = False
+            break
         elif (user_input in day_input) and (category == "Enter Day"):
-            x = False
+            break
         else:
             print("Ops! The input you entered is not correct please try again and choose from the list shown below.\n\n")
 
